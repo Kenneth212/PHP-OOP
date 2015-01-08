@@ -86,19 +86,11 @@
 		public $color = green;
 		public $size = "7";
 		public $height = "2'5";
-
 		function getAnimal() {
-		return "{$this->animal}";
-		“{$this->color}”;
+		return “{$this>animal}” .
+		“{$this>color}”;
 		}
 	}
-	$frog1 = new Frog();
-	$frog1>animal = “amphibian”;
-	$frog1>color = “green”;
-
-	print “The frog’s animal is {$frog1>getAnimal()}.”;
-
-	//The frog's animal is an amphibian.
 
 
 
