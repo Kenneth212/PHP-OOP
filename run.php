@@ -1,5 +1,5 @@
 <?php
-
+<!--EXAMPLE 1: --> 
 if (is_integer(12) > 34 ) 
 {
 	echo "Kenneth";
