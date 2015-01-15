@@ -23,11 +23,24 @@
 			}
 	}
 	class Snickerdoodle extends Cookie {
+			function __construct($gingerbread, $chocolatechip, $sugar, $snickerdoodle, $rasian, $oatmeal, $peanutbutter){				
+				parent::__construct($gingerbread, $chocolatechip, $sugar, $snickeroodle, $rasian, $oatmeal, $peanutbutter);
+			$this->rasian = $rasian;
+			}
 			function sugar() {
 				return $this->rasian;
 			}
 	}
 
+	class Peanutbutter extends Cookie {
+			function __construct($gingerbread, $chocolatechip, $sugar, $snickerdoodle, $rasian, $oatmeal, $peanutbutter){
+				parent::__construct($gingerbread, $chocolatechip, $sugar, $snickerdoodle, $rasian, $oatmeal, $peanutbutter);
+			$this->rasian = $rasian;
+			}
+			function sugar() {
+				return $this->rasian;
+			}
+	}
 $snickerdoodle = new Cookie("snickerdoodle","sugar","peanutbutter","chocolatechip","rasian","gingerbread","oatmeal");
 print"  " .$snickerdoodle->getName(); 
 	
@@ -51,9 +64,22 @@ print"  " .$snickerdoodle->getName();
 			}
 	}
 	class Wheat extends Bread {
+			function __construct($wheat, $italian, $flat, $white) {
+				parent::__construct($wheat, $italian, $flat, $white);
+			$this->white = $white;
+			}
 			function flat() {
 				return $this->white;
 			}
+	}
+	class Italian extends Bread {
+		function __construct($wheat, $italian, $flat, $white) {
+			parent::__construct($wheat, $italian, $flat, $white);
+		$this->white = $white;
+		}
+		function flat() {
+			return $this->white;
+		}
 	}
 
 $wheat = new Bread( "wheat","italian","flat","white");
@@ -74,7 +100,7 @@ print" " . $wheat->getName();
 		}
 
 		function getName() {
-			return "My favorite sport is " . $this->soccer
+			return "My favorite sport is " . $this->soccer;
 		}	
 	}
 	class Soccer extends Sports {
@@ -83,7 +109,7 @@ print" " . $wheat->getName();
 			$this->tennis = $tennis;
 			}
 			function tennis() {
-				return $this->;
+				return $this->football;
 			}
 	}
 	class Volleyball extends Sports {
@@ -91,8 +117,10 @@ print" " . $wheat->getName();
 			parent:: __construct($soccer,$volleyball,$tennis,$football);
 		$this->volleyball = $volleyball;
 		}
+		function tennis() {
+			return $this->football;
+		}
 	}
 $soccer = new Sports( "soccer","volleyball","tennis","football");
 print"  " . $soccer->getName();
-	
 ?>
