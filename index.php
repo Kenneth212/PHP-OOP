@@ -24,7 +24,7 @@
 	$movies2 = newmovies();
 
 	$car1 = newcar();
-	$car2 = newcar();
+	$car2 = newcar(); 
 
 
 <!-- EXAMPLE 3: -->

@@ -19,7 +19,7 @@
 		}
 
 		function getName(){
-			return "My favorite cookie is snickerdoodle" . $this->snickerdoodle;
+			return "My favorite cookie is " . $this->snickerdoodle;
 			}
 	}
 	class Snickerdoodle extends Cookie {
@@ -29,7 +29,7 @@
 	}
 
 $snickerdoodle = new Cookie("snickerdoodle","sugar","peanutbutter","chocolatechip","rasian","gingerbread","oatmeal");
-print" Cookie 1 " .$snickerdoodle->getName(); 
+print"  " .$snickerdoodle->getName(); 
 	
 
 
@@ -47,7 +47,7 @@ print" Cookie 1 " .$snickerdoodle->getName();
 		}
 
 		function getName(){
-			return "My favorite kind of bread is" . $this->wheat;
+			return "My favorite kind of bread is " . $this->wheat;
 			}
 	}
 	class Wheat extends Bread {
@@ -57,7 +57,7 @@ print" Cookie 1 " .$snickerdoodle->getName();
 	}
 
 $wheat = new Bread( "wheat","italian","flat","white");
-print" Wheat 1 " . $wheat->getName(); 
+print" " . $wheat->getName(); 
 
 	
 	class Sports {
@@ -73,17 +73,26 @@ print" Wheat 1 " . $wheat->getName();
 			$this->$football = $football;
 		}
 
-		function getName(){
-			return "My favorite sport is" . $this->soccer;
-			}
+		function getName() {
+			return "My favorite sport is " . $this->soccer
+		}	
 	}
 	class Soccer extends Sports {
+			function __construct($soccer,$volleyball,$tennis,$football) {
+				parent:: __construct($soccer,$volleyball,$tennis,$football);
+			$this->tennis = $tennis;
+			}
 			function tennis() {
-				return $this->football;
+				return $this->;
 			}
 	}
-
+	class Volleyball extends Sports {
+		function __construct($soccer,$volleyball,$tennis,$football) {
+			parent:: __construct($soccer,$volleyball,$tennis,$football);
+		$this->volleyball = $volleyball;
+		}
+	}
 $soccer = new Sports( "soccer","volleyball","tennis","football");
-print"Soccer 1 " . $soccer->getName();
+print"  " . $soccer->getName();
 	
 ?>
